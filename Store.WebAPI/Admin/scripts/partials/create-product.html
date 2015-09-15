@@ -1,0 +1,31 @@
+﻿<br />
+<a href="#/admin/register" id="register-link-btn">Register Admin</a>
+<a href="#/users" id="get-users-btn">Get All Users</a>
+<a href="#/categories" id="categories-btn">Categories</a>
+<a href="#/products" id="products-btn">Products</a>
+<a href="#" id="logout-btn" ng-click="logoutAdmin()">Logout</a>
+
+<select ng-model="selectedCategory">
+	<option ng-repeat="category in categories" selected="{{category.selected}}"value="{{category.Id}}">{{category.Name}}
+	</option>
+</select>
+
+<form id="admin-login-form">
+    <label for="tb-product-name">Name Product</label>
+    <input type="text" id="tb-product-name" ng-model="product.name" />
+    <br />
+    <label for="tb-imageSource">Image Source</label>
+    <input type="text" id="tb-imageSource" ng-model="product.imageSource" />
+    <br />
+    <label for="tb-description">Description</label>
+    <input type="text" id="tb-description" ng-model="product.description" />
+    <br />
+    <label for="tb-price">Price</label>
+    <input type="text" id="tb-price" ng-model="product.price" />
+    <br />
+    <label for="tb-quantity">Quantity</label>
+    <input type="text" id="tb-quantity" ng-model="product.quantity" />
+
+    <br />
+    <a href="#/products" id="product-create-btn" ng-click="createProduct()">Create</a>
+</form>

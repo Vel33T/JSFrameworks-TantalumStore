@@ -1,0 +1,25 @@
+﻿<br />
+<a href="#/admin/register" id="register-link-btn">Register Admin</a>
+<a href="#/users" id="get-users-btn">Get All Users</a>
+<a href="#/categories" id="categories-btn">Categories</a>
+<a href="#/products" id="products-btn">Products</a>
+<a href="#" id="logout-btn" ng-click="logoutAdmin()">Logout</a>
+
+<form id="admin-login-form">
+    <label for="tb-username">Username</label>
+    <input type="text" id="tb-username" ng-model="user.username" />
+    <br />
+    <label for="tb-username">Nickname</label>
+    <input type="text" id="tb-nickname" ng-model="user.displayName" />
+    <br />
+    <label for="tb-password">Password</label>
+    <input type="password" id="tb-password" ng-model="user.authCode" />
+    <label for="tb-isadmin">IsAdmin</label>
+    <select ng-model="user.isAdmin">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+    <br />
+    <a href="#/logout" id="register-btn" ng-click="registerAdmin()">Register</a>
+</form>
